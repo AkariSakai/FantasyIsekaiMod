@@ -1,0 +1,34 @@
+package net.akarisakai.fantasyisekaimod.init;
+
+import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ItemInit {
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, FantasyIsekaiMod.MOD_ID);
+    public static final RegistryObject<Item> GOBLIN_SPAWN_EGG = CreativeTabInit.addToTab(ITEMS.register("goblin_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.GOBLIN_ENTITY, 0x63902e, 0x2e1d10,
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .rarity(Rarity.COMMON)
+            )));
+    public static final RegistryObject<Item> GOBLINWARRIOR_SPAWN_EGG = CreativeTabInit.addToTab(ITEMS.register("goblinwarrior_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.GOBLINWARRIOR_ENTITY, 0x63902e, 0x5a4424,
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .rarity(Rarity.COMMON)
+            )));
+    public static final RegistryObject<Item> GOBLINSHAMAN_SPAWN_EGG = CreativeTabInit.addToTab(ITEMS.register("goblinshaman_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.GOBLINSHAMAN_ENTITY, 0x63902e, 0x494949,
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .rarity(Rarity.COMMON)
+            )));
+
+
+}
