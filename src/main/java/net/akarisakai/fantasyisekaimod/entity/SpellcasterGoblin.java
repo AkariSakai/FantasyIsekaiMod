@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 import java.util.EnumSet;
 import java.util.function.IntFunction;
 
-public abstract class SpellcasterGoblin extends Monster {
+public abstract class SpellcasterGoblin extends AbstractGoblin {
     private static final EntityDataAccessor<Byte> DATA_SPELL_CASTING_ID;
     protected int spellCastingTickCount;
     public net.akarisakai.fantasyisekaimod.entity.SpellcasterGoblin.IllagerSpell currentSpell;

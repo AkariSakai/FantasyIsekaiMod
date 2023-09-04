@@ -37,6 +37,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class GoblinShamanEntity extends SpellcasterGoblin {
+
+
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState attackAnimationState = new AnimationState();
     private Sheep wololoTarget;
@@ -52,8 +54,6 @@ public class GoblinShamanEntity extends SpellcasterGoblin {
         this(level, position.getX(), position.getY(), position.getZ());
 
     }
-
-
     @Override
     protected void registerGoals() {
         super.registerGoals();

@@ -1,5 +1,6 @@
 package net.akarisakai.fantasyisekaimod.client.custom;
 
+import net.akarisakai.fantasyisekaimod.entity.AbstractGoblin;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 
 
 
-public class GoblinWarriorEntity extends Monster {
+public class GoblinWarriorEntity extends AbstractGoblin {
     public final AnimationState idleAnimationState = new AnimationState();
 
 

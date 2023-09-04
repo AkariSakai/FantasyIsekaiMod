@@ -1,5 +1,6 @@
 package net.akarisakai.fantasyisekaimod.client.custom;
 
+import net.akarisakai.fantasyisekaimod.entity.AbstractGoblin;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -35,7 +36,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 
-public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAttackMob {
+public class GoblinEntity extends AbstractGoblin implements RangedAttackMob, CrossbowAttackMob {
+
     private static final EntityDataAccessor<Boolean> DATA_CHARGING_STATE = SynchedEntityData.defineId(GoblinEntity.class, EntityDataSerializers.BOOLEAN);
     public final net.minecraft.world.entity.AnimationState idleAnimationState = new net.minecraft.world.entity.AnimationState();
     public final net.minecraft.world.entity.AnimationState attackAnimationState = new net.minecraft.world.entity.AnimationState();
@@ -46,6 +48,8 @@ public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAt
     private ItemStack primary = ItemStack.EMPTY;
     private ItemStack trident = ItemStack.EMPTY;
     private boolean persistenceRequired;
+
+
 
     public GoblinEntity(@NotNull EntityType<GoblinEntity> entityType, Level world) {
         super(entityType, world);
