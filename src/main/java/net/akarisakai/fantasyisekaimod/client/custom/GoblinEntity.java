@@ -86,8 +86,6 @@ public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAt
     }
 
 
-
-
     @Override
     public void tick() {
         if(level().isClientSide()) {
@@ -288,11 +286,8 @@ public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAt
     }
     public void setGuaranteedDrop(EquipmentSlot pSlot, ItemStack stack) {
         switch (pSlot.getType()) {
-            case HAND:
-                this.handDropChances[pSlot.getIndex()] = 2.0F;
-                break;
-            case ARMOR:
-                this.armorDropChances[pSlot.getIndex()] = 2.0F;
+            case HAND -> this.handDropChances[pSlot.getIndex()] = 2.0F;
+            case ARMOR -> this.armorDropChances[pSlot.getIndex()] = 2.0F;
         }
 
     }
@@ -410,9 +405,7 @@ public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAt
                 SwordItem currentItem = (SwordItem) hand.getItem();
 
                 // Compare the attributes of the items (you can add more checks as needed)
-                if (newItem.getDamage() > currentItem.getDamage()) {
-                    return true;
-                }
+                return newItem.getDamage() > currentItem.getDamage();
             }
         } else if (drop.getItem() instanceof ArmorItem) {
             if (hand.isEmpty() || !(hand.getItem() instanceof ArmorItem)) {
@@ -422,9 +415,7 @@ public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAt
                 ArmorItem currentItem = (ArmorItem) hand.getItem();
 
                 // Compare the attributes of the items (e.g., defense, toughness)
-                if (newItem.getDefense() > currentItem.getDefense()) {
-                    return true;
-                }
+                return newItem.getDefense() > currentItem.getDefense();
                 // You can add more attribute comparisons here as needed
             }
         }
@@ -438,9 +429,7 @@ public class GoblinEntity extends Monster implements RangedAttackMob, CrossbowAt
         if (pCandidate.getDamageValue() < pExisting.getDamageValue() || pCandidate.hasTag() && !pExisting.hasTag()) {
             return true;
         } else if (pCandidate.hasTag() && pExisting.hasTag()) {
-            return pCandidate.getTag().getAllKeys().stream().anyMatch((p_21513_) -> !p_21513_.equals("Damage")) && !pExisting.getTag().getAllKeys().stream().anyMatch((p_21503_) -> {
-                return !p_21503_.equals("Damage");
-            });
+            return pCandidate.getTag().getAllKeys().stream().anyMatch((p_21513_) -> !p_21513_.equals("Damage")) && pExisting.getTag().getAllKeys().stream().allMatch((p_21503_) -> p_21503_.equals("Damage"));
         } else {
             return false;
         }
