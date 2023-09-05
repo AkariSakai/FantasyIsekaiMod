@@ -1,6 +1,7 @@
 package net.akarisakai.fantasyisekaimod.init;
 
 import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
+import net.akarisakai.fantasyisekaimod.client.custom.GoblinArcherEntity;
 import net.akarisakai.fantasyisekaimod.client.custom.GoblinEntity;
 import net.akarisakai.fantasyisekaimod.client.custom.GoblinShamanEntity;
 import net.akarisakai.fantasyisekaimod.client.custom.GoblinWarriorEntity;
@@ -28,5 +29,10 @@ public class EntityInit {
             () -> EntityType.Builder.of(GoblinWarriorEntity::new, MobCategory.MONSTER)
                     .sized(0.5f,1.35f)
                     .build(new ResourceLocation(FantasyIsekaiMod.MOD_ID,"goblinwarrior_entity").toString())
+    );
+    public  static  final RegistryObject<EntityType<GoblinArcherEntity>> GOBLINARCHER_ENTITY = ENTITIES.register("goblinarcher_entity",
+            () -> EntityType.Builder.of(GoblinArcherEntity::new, MobCategory.MONSTER)
+                    .sized(0.5f,1.35f)
+                    .build(new ResourceLocation(FantasyIsekaiMod.MOD_ID,"goblinarcher_entity").toString())
     );
 }

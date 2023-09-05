@@ -1,6 +1,7 @@
 package net.akarisakai.fantasyisekaimod.events;
 
 import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
+import net.akarisakai.fantasyisekaimod.client.custom.GoblinArcherEntity;
 import net.akarisakai.fantasyisekaimod.client.custom.GoblinEntity;
 import net.akarisakai.fantasyisekaimod.client.custom.GoblinShamanEntity;
 import net.akarisakai.fantasyisekaimod.client.custom.GoblinWarriorEntity;
@@ -19,6 +20,7 @@ public class CommonModEvents {
         event.put(EntityInit.GOBLINSHAMAN_ENTITY.get(), GoblinShamanEntity.createAttributes().build());
         event.put(EntityInit.GOBLIN_ENTITY.get(), GoblinEntity.createAttributes().build());
         event.put(EntityInit.GOBLINWARRIOR_ENTITY.get(), GoblinWarriorEntity.createAttributes().build());
+        event.put(EntityInit.GOBLINARCHER_ENTITY.get(), GoblinArcherEntity.createAttributes().build());
     }
 
     @SubscribeEvent
@@ -37,6 +39,11 @@ public class CommonModEvents {
                 SpawnPlacements.Type.ON_GROUND,
                 Heightmap.Types.WORLD_SURFACE,
                 GoblinWarriorEntity::canSpawn,
+                SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(EntityInit.GOBLINARCHER_ENTITY.get(),
+                SpawnPlacements.Type.ON_GROUND,
+                Heightmap.Types.WORLD_SURFACE,
+                GoblinArcherEntity::canSpawn,
                 SpawnPlacementRegisterEvent.Operation.OR);
     }
 }

@@ -29,6 +29,11 @@ public class ItemInit {
                             .stacksTo(64)
                             .rarity(Rarity.COMMON)
             )));
-
+    public static final RegistryObject<Item> GOBLINARCHER_SPAWN_EGG = CreativeTabInit.addToTab(ITEMS.register("goblinarcher_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.GOBLINARCHER_ENTITY, 0x63902e, 0x122a33,
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .rarity(Rarity.COMMON)
+            )));
 
 }

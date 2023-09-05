@@ -49,8 +49,6 @@ public class GoblinEntity extends AbstractGoblin implements RangedAttackMob, Cro
     private ItemStack trident = ItemStack.EMPTY;
     private boolean persistenceRequired;
 
-
-
     public GoblinEntity(@NotNull EntityType<GoblinEntity> entityType, Level world) {
         super(entityType, world);
     }

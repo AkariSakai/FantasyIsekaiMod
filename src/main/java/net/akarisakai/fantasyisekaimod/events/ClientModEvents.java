@@ -1,9 +1,11 @@
 package net.akarisakai.fantasyisekaimod.events;
 
 import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
+import net.akarisakai.fantasyisekaimod.client.model.GoblinArcherEntityModel;
 import net.akarisakai.fantasyisekaimod.client.model.GoblinEntityModel;
 import net.akarisakai.fantasyisekaimod.client.model.GoblinShamanEntityModel;
 import net.akarisakai.fantasyisekaimod.client.model.GoblinWarriorEntityModel;
+import net.akarisakai.fantasyisekaimod.client.renderer.GoblinArcherRenderer;
 import net.akarisakai.fantasyisekaimod.client.renderer.GoblinRenderer;
 import net.akarisakai.fantasyisekaimod.client.renderer.GoblinShamanRenderer;
 import net.akarisakai.fantasyisekaimod.client.renderer.GoblinWarriorRenderer;
@@ -20,6 +22,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(EntityInit.GOBLINSHAMAN_ENTITY.get(), GoblinShamanRenderer::new);
         event.registerEntityRenderer(EntityInit.GOBLIN_ENTITY.get(), GoblinRenderer::new);
         event.registerEntityRenderer(EntityInit.GOBLINWARRIOR_ENTITY.get(), GoblinWarriorRenderer::new);
+        event.registerEntityRenderer(EntityInit.GOBLINARCHER_ENTITY.get(), GoblinArcherRenderer::new);
     }
 
     @SubscribeEvent
@@ -27,6 +30,6 @@ public class ClientModEvents {
         event.registerLayerDefinition(GoblinShamanEntityModel.LAYER_LOCATION, GoblinShamanEntityModel::createBodyLayer);
         event.registerLayerDefinition(GoblinEntityModel.LAYER_LOCATION, GoblinEntityModel::createBodyLayer);
         event.registerLayerDefinition(GoblinWarriorEntityModel.LAYER_LOCATION, GoblinWarriorEntityModel::createBodyLayer);
-
+        event.registerLayerDefinition(GoblinArcherEntityModel.LAYER_LOCATION, GoblinArcherEntityModel::createBodyLayer);
     }
 }

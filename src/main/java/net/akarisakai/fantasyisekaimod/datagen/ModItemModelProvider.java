@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ItemInit.GOBLIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemInit.GOBLINSHAMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemInit.GOBLINWARRIOR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ItemInit.GOBLINARCHER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

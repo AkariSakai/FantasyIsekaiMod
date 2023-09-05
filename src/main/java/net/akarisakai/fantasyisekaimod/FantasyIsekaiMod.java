@@ -45,6 +45,7 @@ public class FantasyIsekaiMod {
             event.accept(ItemInit.GOBLIN_SPAWN_EGG);
             event.accept(ItemInit.GOBLINSHAMAN_SPAWN_EGG);
             event.accept(ItemInit.GOBLINWARRIOR_SPAWN_EGG);
+            event.accept(ItemInit.GOBLINARCHER_SPAWN_EGG);
         }
     }
 
