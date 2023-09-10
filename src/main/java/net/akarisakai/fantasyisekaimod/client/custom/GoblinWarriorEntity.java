@@ -80,7 +80,7 @@ public class GoblinWarriorEntity extends AbstractGoblin {
                 .add(Attributes.MAX_HEALTH, 15.0)
                 .add(Attributes.ATTACK_DAMAGE, 5.0)
                 .add(Attributes.ATTACK_SPEED, 1.6)
-                .add(Attributes.MOVEMENT_SPEED, 0.28)
+                .add(Attributes.MOVEMENT_SPEED, 0.25)
                 .add(Attributes.FOLLOW_RANGE, 16.0);
     }
 

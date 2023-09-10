@@ -55,10 +55,10 @@ public class GoblinEntity extends AbstractGoblin implements RangedAttackMob, Cro
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 15.0)
+                .add(Attributes.MAX_HEALTH, 12.0)
                 .add(Attributes.ATTACK_DAMAGE, 3.0)
                 .add(Attributes.ATTACK_SPEED, 1.2)
-                .add(Attributes.MOVEMENT_SPEED, 0.28)
+                .add(Attributes.MOVEMENT_SPEED, 0.25)
                 .add(Attributes.FOLLOW_RANGE, 16.0);
     }
 

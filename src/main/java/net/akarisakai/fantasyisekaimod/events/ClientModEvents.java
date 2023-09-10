@@ -1,14 +1,8 @@
 package net.akarisakai.fantasyisekaimod.events;
 
 import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
-import net.akarisakai.fantasyisekaimod.client.model.GoblinArcherEntityModel;
-import net.akarisakai.fantasyisekaimod.client.model.GoblinEntityModel;
-import net.akarisakai.fantasyisekaimod.client.model.GoblinShamanEntityModel;
-import net.akarisakai.fantasyisekaimod.client.model.GoblinWarriorEntityModel;
-import net.akarisakai.fantasyisekaimod.client.renderer.GoblinArcherRenderer;
-import net.akarisakai.fantasyisekaimod.client.renderer.GoblinRenderer;
-import net.akarisakai.fantasyisekaimod.client.renderer.GoblinShamanRenderer;
-import net.akarisakai.fantasyisekaimod.client.renderer.GoblinWarriorRenderer;
+import net.akarisakai.fantasyisekaimod.client.model.*;
+import net.akarisakai.fantasyisekaimod.client.renderer.*;
 import net.akarisakai.fantasyisekaimod.init.EntityInit;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -23,6 +17,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(EntityInit.GOBLIN_ENTITY.get(), GoblinRenderer::new);
         event.registerEntityRenderer(EntityInit.GOBLINWARRIOR_ENTITY.get(), GoblinWarriorRenderer::new);
         event.registerEntityRenderer(EntityInit.GOBLINARCHER_ENTITY.get(), GoblinArcherRenderer::new);
+        event.registerEntityRenderer(EntityInit.DIREWOLF_ENTITY.get(), DirewolfRenderer::new);
     }
 
     @SubscribeEvent
@@ -31,5 +26,6 @@ public class ClientModEvents {
         event.registerLayerDefinition(GoblinEntityModel.LAYER_LOCATION, GoblinEntityModel::createBodyLayer);
         event.registerLayerDefinition(GoblinWarriorEntityModel.LAYER_LOCATION, GoblinWarriorEntityModel::createBodyLayer);
         event.registerLayerDefinition(GoblinArcherEntityModel.LAYER_LOCATION, GoblinArcherEntityModel::createBodyLayer);
+        event.registerLayerDefinition(DirewolfEntityModel.LAYER_LOCATION, DirewolfEntityModel::createBodyLayer);
     }
 }

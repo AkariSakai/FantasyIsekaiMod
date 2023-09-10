@@ -3,8 +3,10 @@
   "item.fantasyisekaimod.goblinshaman_spawn_egg": "Goblin Shaman Spawn Egg",
   "item.fantasyisekaimod.goblinwarrior_spawn_egg": "Goblin Warrior Spawn Egg",
   "item.fantasyisekaimod.goblinarcher_spawn_egg": "Goblin Archer Spawn Egg",
+  "item.fantasyisekaimod.direwolf_spawn_egg": "Direwolf Spawn Egg",
   "entity.fantasyisekaimod.goblinwarrior_entity": "Goblin Warrior",
   "entity.fantasyisekaimod.goblin_entity": "Goblin",
   "entity.fantasyisekaimod.goblinshaman_entity": "Goblin Shaman",
-  "entity.fantasyisekaimod.goblinarcher_entity": "Goblin Archer"
+  "entity.fantasyisekaimod.goblinarcher_entity": "Goblin Archer",
+  "entity.fantasyisekaimod.direwolf_entity": "Direwolf"
 }

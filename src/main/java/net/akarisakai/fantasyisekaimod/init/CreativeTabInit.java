@@ -41,6 +41,10 @@ public class CreativeTabInit {
         if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
             event.accept(ItemInit.GOBLIN_SPAWN_EGG);
             event.accept(ItemInit.GOBLINSHAMAN_SPAWN_EGG);
+            event.accept(ItemInit.GOBLINWARRIOR_SPAWN_EGG);
+            event.accept(ItemInit.GOBLINARCHER_SPAWN_EGG);
+            event.accept(ItemInit.DIREWOLF_SPAWN_EGG);
+
         }
 
     }

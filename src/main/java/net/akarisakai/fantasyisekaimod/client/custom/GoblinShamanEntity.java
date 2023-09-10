@@ -11,7 +11,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -67,7 +66,6 @@ public class GoblinShamanEntity extends SpellcasterGoblin {
         this.goalSelector.addGoal(9, new LookAtPlayerGoal(this, Player.class, 3.0F, 1.0F));
         this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Mob.class, 8.0F));
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
@@ -95,9 +93,9 @@ public class GoblinShamanEntity extends SpellcasterGoblin {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MOVEMENT_SPEED, 0.28)
+                .add(Attributes.MOVEMENT_SPEED, 0.25)
                 .add(Attributes.FOLLOW_RANGE, 12.0)
-                .add(Attributes.MAX_HEALTH, 15.0);
+                .add(Attributes.MAX_HEALTH, 12.0);
     }
 
     protected void defineSynchedData() {
@@ -130,17 +128,6 @@ public class GoblinShamanEntity extends SpellcasterGoblin {
         }
     }
 
-    protected SoundEvent getAmbientSound() {
-        return SoundEvents.EVOKER_AMBIENT;
-    }
-
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.EVOKER_DEATH;
-    }
-
-    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.EVOKER_HURT;
-    }
 
     void setWololoTarget(@Nullable Sheep pWololoTarget) {
         this.wololoTarget = pWololoTarget;

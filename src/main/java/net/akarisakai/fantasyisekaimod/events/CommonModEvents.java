@@ -1,10 +1,7 @@
 package net.akarisakai.fantasyisekaimod.events;
 
 import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinArcherEntity;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinEntity;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinShamanEntity;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinWarriorEntity;
+import net.akarisakai.fantasyisekaimod.client.custom.*;
 import net.akarisakai.fantasyisekaimod.init.EntityInit;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -21,6 +18,8 @@ public class CommonModEvents {
         event.put(EntityInit.GOBLIN_ENTITY.get(), GoblinEntity.createAttributes().build());
         event.put(EntityInit.GOBLINWARRIOR_ENTITY.get(), GoblinWarriorEntity.createAttributes().build());
         event.put(EntityInit.GOBLINARCHER_ENTITY.get(), GoblinArcherEntity.createAttributes().build());
+        event.put(EntityInit.DIREWOLF_ENTITY.get(), DirewolfEntity.createAttributes().build());
+
     }
 
     @SubscribeEvent
@@ -44,6 +43,11 @@ public class CommonModEvents {
                 SpawnPlacements.Type.ON_GROUND,
                 Heightmap.Types.WORLD_SURFACE,
                 GoblinArcherEntity::canSpawn,
+                SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(EntityInit.DIREWOLF_ENTITY.get(),
+                SpawnPlacements.Type.ON_GROUND,
+                Heightmap.Types.WORLD_SURFACE,
+                DirewolfEntity::canSpawn,
                 SpawnPlacementRegisterEvent.Operation.OR);
     }
 }

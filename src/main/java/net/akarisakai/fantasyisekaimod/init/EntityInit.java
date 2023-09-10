@@ -1,10 +1,7 @@
 package net.akarisakai.fantasyisekaimod.init;
 
 import net.akarisakai.fantasyisekaimod.FantasyIsekaiMod;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinArcherEntity;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinEntity;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinShamanEntity;
-import net.akarisakai.fantasyisekaimod.client.custom.GoblinWarriorEntity;
+import net.akarisakai.fantasyisekaimod.client.custom.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -34,5 +31,10 @@ public class EntityInit {
             () -> EntityType.Builder.of(GoblinArcherEntity::new, MobCategory.MONSTER)
                     .sized(0.5f,1.35f)
                     .build(new ResourceLocation(FantasyIsekaiMod.MOD_ID,"goblinarcher_entity").toString())
+    );
+    public  static  final RegistryObject<EntityType<DirewolfEntity>> DIREWOLF_ENTITY = ENTITIES.register("direwolf_entity",
+            () -> EntityType.Builder.of(DirewolfEntity::new, MobCategory.MONSTER)
+                    .sized(1.5f,1.35f)
+                    .build(new ResourceLocation(FantasyIsekaiMod.MOD_ID,"direwolf_entity").toString())
     );
 }
