@@ -24,7 +24,6 @@ import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
 public class GoblinArcherEntityModel<T extends GoblinArcherEntity> extends HierarchicalModel<T> implements ArmedModel {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(FantasyIsekaiMod.MOD_ID, "goblinarcher_entity"), "main");
 	private final GoblinArcherEntityModel.ModelParts parts;
 

@@ -47,6 +47,7 @@ public class FantasyIsekaiMod {
             event.accept(ItemInit.GOBLINWARRIOR_SPAWN_EGG);
             event.accept(ItemInit.GOBLINARCHER_SPAWN_EGG);
             event.accept(ItemInit.DIREWOLF_SPAWN_EGG);
+            event.accept(ItemInit.ORC_SPAWN_EGG);
         }
     }
 

@@ -19,6 +19,7 @@ public class CommonModEvents {
         event.put(EntityInit.GOBLINWARRIOR_ENTITY.get(), GoblinWarriorEntity.createAttributes().build());
         event.put(EntityInit.GOBLINARCHER_ENTITY.get(), GoblinArcherEntity.createAttributes().build());
         event.put(EntityInit.DIREWOLF_ENTITY.get(), DirewolfEntity.createAttributes().build());
+        event.put(EntityInit.ORC_ENTITY.get(), OrcEntity.createAttributes().build());
 
     }
 
@@ -48,6 +49,11 @@ public class CommonModEvents {
                 SpawnPlacements.Type.ON_GROUND,
                 Heightmap.Types.WORLD_SURFACE,
                 DirewolfEntity::canSpawn,
+                SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(EntityInit.ORC_ENTITY.get(),
+                SpawnPlacements.Type.ON_GROUND,
+                Heightmap.Types.WORLD_SURFACE,
+                OrcEntity::canSpawn,
                 SpawnPlacementRegisterEvent.Operation.OR);
     }
 }

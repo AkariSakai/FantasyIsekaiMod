@@ -18,6 +18,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(EntityInit.GOBLINWARRIOR_ENTITY.get(), GoblinWarriorRenderer::new);
         event.registerEntityRenderer(EntityInit.GOBLINARCHER_ENTITY.get(), GoblinArcherRenderer::new);
         event.registerEntityRenderer(EntityInit.DIREWOLF_ENTITY.get(), DirewolfRenderer::new);
+        event.registerEntityRenderer(EntityInit.ORC_ENTITY.get(), OrcRenderer::new);
     }
 
     @SubscribeEvent
@@ -27,5 +28,6 @@ public class ClientModEvents {
         event.registerLayerDefinition(GoblinWarriorEntityModel.LAYER_LOCATION, GoblinWarriorEntityModel::createBodyLayer);
         event.registerLayerDefinition(GoblinArcherEntityModel.LAYER_LOCATION, GoblinArcherEntityModel::createBodyLayer);
         event.registerLayerDefinition(DirewolfEntityModel.LAYER_LOCATION, DirewolfEntityModel::createBodyLayer);
+        event.registerLayerDefinition(OrcEntityModel.LAYER_LOCATION, OrcEntityModel::createBodyLayer);
     }
 }

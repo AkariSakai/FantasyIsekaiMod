@@ -20,7 +20,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import org.jetbrains.annotations.NotNull;
 
 public class DirewolfEntityModel<T extends DirewolfEntity> extends HierarchicalModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(FantasyIsekaiMod.MOD_ID, "direwolf_entity"), "main");
 	private final DirewolfEntityModel.ModelParts parts;
 

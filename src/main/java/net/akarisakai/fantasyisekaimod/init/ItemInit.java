@@ -41,6 +41,12 @@ public class ItemInit {
                             .stacksTo(64)
                             .rarity(Rarity.COMMON)
             )));
+    public static final RegistryObject<Item> ORC_SPAWN_EGG = CreativeTabInit.addToTab(ITEMS.register("orc_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.ORC_ENTITY, 0xe8a074, 0x811d14,
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .rarity(Rarity.COMMON)
+            )));
 
 
 }

@@ -37,4 +37,9 @@ public class EntityInit {
                     .sized(1.5f,1.35f)
                     .build(new ResourceLocation(FantasyIsekaiMod.MOD_ID,"direwolf_entity").toString())
     );
+    public  static  final RegistryObject<EntityType<OrcEntity>> ORC_ENTITY = ENTITIES.register("orc_entity",
+            () -> EntityType.Builder.of(OrcEntity::new, MobCategory.MONSTER)
+                    .sized(1.6f,2.80f)
+                    .build(new ResourceLocation(FantasyIsekaiMod.MOD_ID,"orc_entity").toString())
+    );
 }
